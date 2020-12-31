@@ -50,7 +50,7 @@ public:
 		addr.sin_port = htons(port);
 
 		while (connect(server, (SOCKADDR*)&addr, sizeof(addr)));
-		cout << port << "연결됨" << endl;
+		cout << port << " Connected." << endl;
 	}
 }; _dpVec<stream>streams;
 
@@ -102,7 +102,7 @@ int main() {
 		if (crtPort(portnum)) {
 			send(streams[portnum - cntport].server, buffer, PACKET_SIZE, 0);
 		}
-		else cout << "존재하지 않는 스트림입니다." << endl;
+		else cout << "It is not exist stream." << endl;
 	}
 
 	closesocket(server);

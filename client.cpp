@@ -1,4 +1,4 @@
-//Å¬¶óÀÌ¾ðÆ®
+//Client
 
 #pragma comment(lib, "ws2_32.lib")
 
@@ -50,7 +50,7 @@ public:
 		addr.sin_port = htons(port);
 
 		while (connect(server, (SOCKADDR*)&addr, sizeof(addr)));
-		cout << port << "¿¬°áµÊ" << endl;
+		cout << port << "ì—°ê²°ë¨" << endl;
 	}
 }; _dpVec<stream>streams;
 
@@ -102,7 +102,7 @@ int main() {
 		if (crtPort(portnum)) {
 			send(streams[portnum - cntport].server, buffer, PACKET_SIZE, 0);
 		}
-		else cout << "Á¸ÀçÇÏÁö ¾Ê´Â ½ºÆ®¸²ÀÔ´Ï´Ù." << endl;
+		else cout << "ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ìŠ¤íŠ¸ë¦¼ìž…ë‹ˆë‹¤." << endl;
 	}
 
 	closesocket(server);
